@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <title>Epic Adventure</title>
+  <script src="functions.js" type="text/javascript" language="javascript"></script>
+  <script src="player.js" type="text/javascript" language="javascript"></script>
+  <script src="story.js" type="text/javascript" language="javascript"></script>
+  <script src="dungeon.js" type="text/javascript" language="javascript"></script>
+  <script src="rooms.js" type="text/javascript" language="javascript"></script>
+  <script src="miscFunctions.js" type="text/javascript" language="javascript"></script>
+  <script src="dungeon23-46.js" type="text/javascript" language="javascript"></script>
+  <script src="dungeon47-end.js" type="text/javascript" language="javascript"></script>
+  <script src="monsters.js" type="text/javascript" language="javascript"></script>
+  <script src="fights.js" type="text/javascript" language="javascript"></script>
+  <script src="counters.js" type="text/javascript" language="javascript"></script>
+  <script src="magicFights.js" type="text/javascript" language="javascript"></script>
+  <script src="collapses.js" type="text/javascript" language="javascript"></script>
+</head>
+<body onload="storyDisable()">
+  <h1 style="text-align:center">Awesome Epic Adventure</h1>
+  <div id="idDiv">
+  </div>
+  <div id="startDiv">
+  Enter your Name<input type="text" size="20" value="" id="namebox">
+  <br>
+  Choose your class!
+  <input type="button" Value="Cleric"
+    onclick="cleric()";></input>
+  <input type="button" value="Warrior"
+    onclick="warrior()";></input>
+  <input type="button" value="Wizard"
+    onclick="wizard()";></input>
+  <input type="button" value="Rogue"
+    onclick="rogue()";></input>
+  <br>
+  <input type="button" value="display class"
+    onclick="alert(player.spec)"></input>
+  <input type="button" value="display name"
+    onclick="alert(player.name)"></input>
+  <br>
+  <input type="button" value="Start your story" id="stobutton"
+    onclick="storyStart()"></input>
+    <input type="button" value="command test"
+      onclick="alert(orc.atk)"></input>
+  </div>
+  <div id="storyDiv" style="text-align:center"></div>
+</body>
+</html>
