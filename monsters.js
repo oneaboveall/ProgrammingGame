@@ -1,6 +1,7 @@
 var orc = {
   name:'Orc',
-  atk:5,
+  atk:0,
+  hp:0,
 }
 var troll = {
   name:'Troll',

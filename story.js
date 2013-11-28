@@ -52,7 +52,8 @@ function headout(){
   var combat
     combat = d20();
     if (parseFloat(sFight) > 1){
-      document.getElementById('storyDiv').innerHTML = "Avoided Combat!"
+      pm1Find();
+      document.getElementById('stryDiv').innerHTML = "Avoided Combat!"
         + 'You come across the warrior, or the not warrior depending on code.'
         + '<br><input type="button" value="Accept the Warrior\'s aid" onclick="toDungeon()"></input>'
         + '<input type="button" value="Chicken out like the other villiagers" onclick="denyQuest()"></input>';
@@ -62,6 +63,7 @@ function headout(){
         + '<br><input type="button" value=' + player.spl1 + ' onclick="fightRd()"></input>';
         sFight++;
       } else {
+        pm1Find();
         document.getElementById('storyDiv').innerHTML = "Avoided Combat!"
         + 'You come across the warrior, or the not warrior depending on code.'
         + '<br><input type="button" value="Accept the Warrior\'s aid" onclick="toDungeon()"></input>'

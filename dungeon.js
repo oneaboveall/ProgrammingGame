@@ -19,19 +19,20 @@ function p2(){
 
 function p3(){
   if (p5Collapse < 1){
-  document.getElementById('storyDiv').innerHTML = "spooky cooridor 3"
+    document.getElementById('storyDiv').innerHTML = "spooky cooridor 3"
     +'<br><input type="button" value="North" onclick="p1()"></input>'
     +'<input type="button" value="South" onclick="p5()"></input>';
   } else {
-    document.getElementById('storyDiv').innerHTML = "spooky cooridor 3.  There is rubble in the way, you cannot get to p5."
-    +'<br><input type="button" value="North" onclick="p1()"></input>';}
+      stopTimeout(p5Ctime);
+      document.getElementById('storyDiv').innerHTML = "spooky cooridor 3.  There is rubble in the way, you cannot get to p5."
+      +'<br><input type="button" value="North" onclick="p1()"></input>';}
 }
 
 function p4(){
   document.getElementById('storyDiv').innerHTML = 'T 4.'
-  + '<br><input type="button" value="west" onclick="p2()"></input>'
-  + '<input type="button" value="south" onclick="r1()"></input>'
-  + '<input type="button" value="East" onclick="p12()"></input>';
+  +'<br><input type="button" value="west" onclick="p2()"></input>'
+  +'<input type="button" value="south" onclick="r1()"></input>'
+  +'<input type="button" value="East" onclick="p12()"></input>';
 }
 
 function p5(){
@@ -39,32 +40,34 @@ function p5(){
     p5C();
     p5Collapse++;
       document.getElementById('storyDiv').innerHTML = "You are about to be crushed!"
-        +'<br><input type="button" value="MOVE!" onclick="p5()"></input>'
-        +'<input type="button" value="Test" onclick="alert(p5Collapse)"></input>';
+        +'<br><input type="button" value="MOVE!" onclick="p3()"></input>'
+        +'<input type="button" value="MOVE!" onclick="p7()"></input>';
     } else{
-  document.getElementById('storyDiv').innerHTML = "Hallway 5. Collapsed. You cannot return to p3."
-  + '<br><input type="button" value="South" onclick="p7()"></input>';}
+        stopTimeout(p5Ctime);
+        document.getElementById('storyDiv').innerHTML = "Hallway 5. Collapsed. You cannot return to p3."
+      +'<br><input type="button" value="South" onclick="p7()"></input>';}
 }
 
 function p6(){
   document.getElementById('storyDiv').innerHTML = 'T 6'
-  + '<br><input type="button" value="West" onclick="p12()"></input>'
-  + '<input type="button" value="South" onclick="p10()"></input>'
-  + '<input type="button" value="East" onclick="p8()"></input>';
+  +'<br><input type="button" value="West" onclick="p12()"></input>'
+  +'<input type="button" value="South" onclick="p10()"></input>'
+  +'<input type="button" value="East" onclick="p8()"></input>';
 }
 
 function p7(){
-  if (p7Fight < 1){
-    p7F();
-    p7Fight++;
-     document.getElementById('storyDiv').innerHTML = "You are attacked by an Orc! T 7!"
-        + '<br><input type="button" value=' + player.spl1 + ' onclick="p7F()"></input>';}
-        else{
-          document.getElementById('storyDiv').innerHTML = "T 7. Battle."
-          + '<br><input type="button" value="North" onclick="p5()"></input>'
-          + '<input type="button" value="South" onclick="p11()"></input>'
-          + '<input type="button" value="East" onclick="p9()"></input>'
-          +'<input type="button" value="Test" onclick="alert(p7Fight)"></input>';}
+  if (p5Collapse < 1){
+        document.getElementById('storyDiv').innerHTML = "T 7."
+        +'<br><input type="button" value="North" onclick="p5()"></input>'
+        +'<input type="button" value="South" onclick="p11()"></input>'
+        +'<input type="button" value="East" onclick="p9()"></input>'
+        +'<input type="button" value="Test" onclick="alert(p7Fight)"></input>';
+        } else{
+        stopTimeout(p5Ctime);
+        document.getElementById('storyDiv').innerHTML = "T 7. Debris has fallen, you cannot get to p5."
+        +'<input type="button" value="South" onclick="p11()"></input>'
+        +'<input type="button" value="East" onclick="p9()"></input>'
+        +'<input type="button" value="Test" onclick="alert(p7Fight)"></input>'}
 }
 
 function p8(){
@@ -75,8 +78,9 @@ function p8(){
 
 function p9(){
   document.getElementById('storyDiv').innerHTML = "Hallway 9. Battle."
-  + '<br><input type="button" value="Enter Assassin\'s Gallery" onclick="assassin()"></input>'
+  + '<br><input type="button" value="Enter Assassin\'s Gallery" onclick="assassinFight()"></input>'
   + '<input type="button" value="West" onclick="p7()"></input>'
+  +'<input type="button" value="TEST" onclick="alert(Assassin.hp)"></input>';
 }
 
 function p10(){
@@ -86,9 +90,15 @@ function p10(){
 }
 
 function p11(){
-  document.getElementById('storyDiv').innerHTML = "Hallway 11."
-  + '<br><input type="button" value="North" onclick="p7()"></input>'
-  + '<input type="button" value="South" onclick="p13()"></input>';
+  if (p11Fight < 1){
+    p11F();
+    p11Fight++;
+     document.getElementById('storyDiv').innerHTML = "You are attacked by an Orc! T 11!"
+        + '<br><input type="button" value=' + player.spl1 + ' onclick="p11F()"></input>';}
+        else{
+          document.getElementById('storyDiv').innerHTML = "Hallway 11. Battle."
+          + '<br><input type="button" value="North" onclick="p7()"></input>'
+          + '<input type="button" value="South" onclick="p13()"></input>';}
 }
 
 function p12(){
@@ -185,14 +195,14 @@ function p21(){
 }
 
 function p22(){
-  if (p22Fight < 1){
-    p22F();
-    p22Fight++;
-      document.getElementById('storyDiv').innerHTML = "You are attacked by an orc! T 22."
-      + '<br><input type="button" value=' + player.spl1 + ' onclick="p22F()"></input>';
-      } else{
-        document.getElementById('storyDiv').innerHTML = "T 22. Battle."
-        + '<br><input type="button" value="North" onclick="r6()"></input>'
-        + '<input type="button" value="South" onclick="p26()"></input>'
-        + '<input type="button" value="East" onclick="p24()"></input>';}
+  if (p26Collapse < 1){
+    document.getElementById('storyDiv').innerHTML = "T 22."
+    +'<br><input type="button" value="North" onclick="r6()"></input>'
+    +'<input type="button" value="South" onclick="p26()"></input>'
+    +'<input type="button" value="East" onclick="p24()"></input>';
+    } else{
+        stopTimeout(p26Ctime);
+        document.getElementById('storyDiv').innerHTML = "T 22. Debris. p26 inacessible."
+        +'<br><input type="button" value="North" onclick="r6()"></input>'
+        +'<input type="button" value="East" onclick="p24()"></input>';}
 }

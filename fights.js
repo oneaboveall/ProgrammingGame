@@ -1,6 +1,6 @@
 function fightRd() {
-  document.getElementById('storyDiv').innerHTML = "You are locked in combat with the Orc!";
-  if (player.atk+d20() >= orc.atk){
+  orc.hp=5
+  if (player.atk+d20() >= orcAtk()){
     player.atk++;
     sFight++;
     ID();
@@ -10,14 +10,13 @@ function fightRd() {
     }
 }
 
-function p7F(){
-  document.getElementById('storyDiv').innerHTML = "You are locked in Combat with an Orc!";
-  if (player.atk+d20() >= orc.atk){
+function p11F(){
+  orc.hp=5
+  if (player.atk+d20() >= orcAtk()){
     document.getElementById('storyDiv').innerHTML = "You have Killed the orc."
-    +'<br><input type="button" value="Continue Adventure" onclick="p7()"></input>'
-    +'<input type="button" value="Test" onclick="alert(p7Fight)"></input>';
+    +'<br><input type="button" value="Continue Adventure" onclick="p11()"></input>';
     player.atk++;
-    p7Fight++;
+    p11Fight++;
     ID();
     } else{
     dead();
@@ -25,8 +24,8 @@ function p7F(){
 }
 
 function p12F(){
-  document.getElementById('storyDiv').innerHTML = "You are locked in combat with an orc!"
-    if (player.atk+d20() >= orc.atk){
+  orc.hp=5
+  if (player.atk+d20() >= orcAtk()){
     document.getElementById('storyDiv').innerHTML = "You have killed the orc!"
     +'<br><input type="button" value="Continue Adventure" onclick="p12()"></input>';
     player.atk++;
@@ -38,8 +37,8 @@ function p12F(){
 }
 
 function p14F(){
-  document.getElementById('storyDiv').innerHTML = "You are locked in combat with an orc!"
-    if (player.atk+d20() >= orc.atk){
+  orc.hp=5
+  if (player.atk+d20() >= orcAtk()){
     document.getElementById('storyDiv').innerHTML = "You have killed the orc!"
     +'<br><input type="button" value="Continue Adventure" onclick="p14()"></input>';
     player.atk++;
@@ -51,8 +50,8 @@ function p14F(){
 }
 
 function p16F(){
-  document.getElementById('storyDiv').innerHTML = "You are locked in combat with an orc!"
-    if (player.atk+d20() >= orc.atk){
+  orc.hp=5
+  if (player.atk+d20() >= orcAtk()){
     document.getElementById('storyDiv').innerHTML = "You have killed the orc!"
     +'<br><input type="button" value="Continue Adventure" onclick="p16()"></input>';
     player.atk++;
@@ -64,8 +63,8 @@ function p16F(){
 }
 
 function p20F(){
-  document.getElementById('storyDiv').innerHTML = "You are locked in combat with an orc!"
-    if (player.atk+d20() >= orc.atk){
+  orc.hp=5
+  if (player.atk+d20() >= orcAtk()){
     document.getElementById('storyDiv').innerHTML = "You have killed the orc!"
     +'<br><input type="button" value="Continue Adventure" onclick="p20()"></input>';
     player.atk++;
@@ -76,13 +75,13 @@ function p20F(){
     }
 }
 
-function p22F(){
-  document.getElementById('storyDiv').innerHTML = "You are locked in combat with an orc!"
-    if (player.atk+d20() >= orc.atk){
+function p24F(){
+  orc.hp=5
+  if (player.atk+d20() >= orcAtk()){
     document.getElementById('storyDiv').innerHTML = "You have killed the orc!"
-    +'<br><input type="button" value="Continue Adventure" onclick="p22()"></input>';
+    +'<br><input type="button" value="Continue Adventure" onclick="p24()"></input>';
     player.atk++;
-    p22Fight++;
+    p24Fight++;
     ID();
     } else{
     dead();
@@ -90,8 +89,8 @@ function p22F(){
 }
 
 function p25F(){
-  document.getElementById('storyDiv').innerHTML = "You are locked in combat with an orc!"
-    if (player.atk+d20() >= orc.atk){
+  orc.hp=5
+  if (player.atk+d20() >= orcAtk()){
     document.getElementById('storyDiv').innerHTML = "You have killed the orc!"
     +'<br><input type="button" value="Continue Adventure" onclick="p25()"></input>';
     player.atk++;
@@ -103,8 +102,8 @@ function p25F(){
 }
 
 function p30F(){
-  document.getElementById('storyDiv').innerHTML = "You are locked in combat with an orc!"
-    if (player.atk+d20() >= orc.atk){
+  orc.hp=5
+  if (player.atk+d20() >= orcAtk()){
     document.getElementById('storyDiv').innerHTML = "You have killed the orc!"
     +'<br><input type="button" value="Continue Adventure" onclick="p30()"></input>';
     player.atk++;
@@ -116,8 +115,8 @@ function p30F(){
 }
 
 function p33F(){
-  document.getElementById('storyDiv').innerHTML = "You are locked in combat with an orc!"
-    if (player.atk+d20() >= orc.atk){
+  orc.hp=5
+  if (player.atk+d20() >= orcAtk()){
     document.getElementById('storyDiv').innerHTML = "You have killed the orc!"
     +'<br><input type="button" value="Continue Adventure" onclick="p33()"></input>';
     player.atk++;
@@ -129,8 +128,8 @@ function p33F(){
 }
 
 function p41F(){
-  document.getElementById('storyDiv').innerHTML = "You are locked in combat with an orc!"
-    if (player.atk+d20() >= orc.atk){
+  orc.hp=5
+  if (player.atk+d20() >= orcAtk()){
     document.getElementById('storyDiv').innerHTML = "You have killed the orc!"
     +'<br><input type="button" value="Continue Adventure" onclick="p41()"></input>';
     player.atk++;
@@ -142,8 +141,8 @@ function p41F(){
 }
 
 function p42F(){
-  document.getElementById('storyDiv').innerHTML = "You are locked in combat with an orc!"
-    if (player.atk+d20() >= orc.atk){
+  orc.hp=5
+  if (player.atk+d20() >= orcAtk()){
     document.getElementById('storyDiv').innerHTML = "You have killed the orc!"
     +'<br><input type="button" value="Continue Adventure" onclick="p42()"></input>';
     player.atk++;
@@ -155,8 +154,8 @@ function p42F(){
 }
 
 function p43F(){
-  document.getElementById('storyDiv').innerHTML = "You are locked in combat with an orc!"
-    if (player.atk+d20() >= orc.atk){
+  orc.hp=5
+  if (player.atk+d20() >= orcAtk()){
     document.getElementById('storyDiv').innerHTML = "You have killed the orc!"
     +'<br><input type="button" value="Continue Adventure" onclick="p43()"></input>';
     player.atk++;
@@ -168,8 +167,8 @@ function p43F(){
 }
 
 function p51F(){
-  document.getElementById('storyDiv').innerHTML = "You are locked in combat with an orc!"
-    if (player.atk+d20() >= orc.atk){
+  orc.hp=5
+  if (player.atk+d20() >= orcAtk()){
     document.getElementById('storyDiv').innerHTML = "You have killed the orc!"
     +'<br><input type="button" value="Continue Adventure" onclick="p51()"></input>';
     player.atk++;
@@ -181,8 +180,8 @@ function p51F(){
 }
 
 function p53F(){
-  document.getElementById('storyDiv').innerHTML = "You are locked in combat with an orc!"
-    if (player.atk+d20() >= orc.atk){
+  orc.hp=5
+  if (player.atk+d20() >= orcAtk()){
     document.getElementById('storyDiv').innerHTML = "You have killed the orc!"
     +'<br><input type="button" value="Continue Adventure" onclick="p53()"></input>';
     player.atk++;
@@ -194,8 +193,8 @@ function p53F(){
 }
 
 function p54F(){
-  document.getElementById('storyDiv').innerHTML = "You are locked in combat with an orc!"
-    if (player.atk+d20() >= orc.atk){
+  orc.hp=5
+  if (player.atk+d20() >= orcAtk()){
     document.getElementById('storyDiv').innerHTML = "You have killed the orc!"
     +'<br><input type="button" value="Continue Adventure" onclick="p54()"></input>';
     player.atk++;
@@ -207,8 +206,8 @@ function p54F(){
 }
 
 function p62F(){
-  document.getElementById('storyDiv').innerHTML = "You are locked in combat with an orc!"
-    if (player.atk+d20() >= orc.atk){
+  orc.hp=5
+  if (player.atk+d20() >= orcAtk()){
     document.getElementById('storyDiv').innerHTML = "You have killed the orc!"
     +'<br><input type="button" value="Continue Adventure" onclick="p62()"></input>';
     player.atk++;

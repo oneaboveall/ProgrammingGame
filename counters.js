@@ -8,12 +8,12 @@ p44Collapse=0;
 p59Collapse=0;
 //Fights
 sFight=0;
-p7Fight=0;
+p11Fight=0;
 p12Fight=0;
 p14Fight=0;
 p16Fight=0;
 p20Fight=0;
-p22Fight=0;
+p24Fight=0;
 p25Fight=0;
 p30Fight=0;
 p33Fight=0;
@@ -28,3 +28,10 @@ p62Fight=0;
 p17Fight=0;
 p49Fight=0;
 p50Fight=0;
+//Boss Fights
+aFCounter=0;
+cFCounter=0;
+pFCounter=0;
+sFCounter=0;
+gFCounter=0;
+dFCounter=0;

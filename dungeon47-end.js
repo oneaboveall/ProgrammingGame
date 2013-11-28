@@ -50,8 +50,8 @@ function p51(){
 
 function p52(){
   document.getElementById('storyDiv').innerHTML = "Corner 52"
-  +'<br><input type="button value="Enter Sorcerer\'s Chamber" onclick="sorcerersChamber()"></input>'
-  +'<input type="button" value="Enter golem chamber" onclick="golem()"></input>';
+  +'<br><input type="button" value="Enter Sorcerer\'s Chamber" onclick="sorcerersChamber()"></input>'
+  +'<input type="button" value="Enter golem chamber" onclick="golemRoom()"></input>';
 }
 
 function p53(){
@@ -94,10 +94,16 @@ function p56(){
 }
 
 function p57(){
-  document.getElementById('storyDiv').innerHTML = "T 57."
-  +'<br><input type="button" value="West" onclick="p67()"></input>'
-  +'<input type="button" value="North" onclick="p55()"></input>'
-  +'<input type="button" value="South" onclick="p59()"></input>';
+  if (p59Collapse < 1){
+    document.getElementById('storyDiv').innerHTML = "T 57."
+    +'<br><input type="button" value="West" onclick="p67()"></input>'
+    +'<input type="button" value="North" onclick="p55()"></input>'
+    +'<input type="button" value="South" onclick="p59()"></input>';
+    } else{
+        stopTimeout(p59Ctime);
+        document.getElementById('storyDiv').innerHTML = "T 57. Collapse Cannot get to p59."
+        +'<br><input type="button" value="West" onclick="p67()"></input>'
+        +'<input type="button" value="North" onclick="p55()"></input>';}
 }
 
 function p58(){
@@ -107,9 +113,15 @@ function p58(){
 }
 
 function p59(){
-  document.getElementById('storyDiv').innerHTML = "Hallway 59. Collapse!"
-  +'<br><input type="button" value="North" onclick="p57()"></input>'
-  +'<input type="button" value="South" onclick="p61()"></input>';
+  if (p59Collapse < 1){
+    p59C();
+    p59Collapse++;
+    document.getElementById('storyDiv').innerHTML = "You are about to be crushed!"
+    +'<br><input type="button" value="MOVE!" onclick="p57()"></input>'
+    +'<br><input type="button" value="MOVE!" onclick="p61()"></input>'
+  } else {document.getElementById('storyDiv').innerHTML = "Hallway 59. Collapse!"
+      +'<br><input type="button" value="North" onclick="p57()"></input>'
+      +'<input type="button" value="South" onclick="p61()"></input>';}
 }
 
 function p60(){
@@ -119,10 +131,16 @@ function p60(){
 }
 
 function p61(){
-  document.getElementById('storyDiv').innerHTML = "T 61."
-  +'<br><input type="button" value="Not-so-secret Secret Tunnel" onclick="s3()"></input>'
-  +'<input type="button" value="North" onclick=p59()"></input>'
-  +'<input type="button" value="South" onclick="p33()"></input>';
+  if (p59Collapse < 1){
+    document.getElementById('storyDiv').innerHTML = "T 61."
+    +'<br><input type="button" value="Not-so-secret Secret Tunnel" onclick="s3()"></input>'
+    +'<input type="button" value="North" onclick="p59()"></input>'
+    +'<input type="button" value="South" onclick="p33()"></input>';
+    } else{
+      stopTimeout(p59Ctime);
+      document.getElementById('storyDiv').innerHTML = "T 61. Collapsed, cannot get to p59."
+      +'<br><input type="button" value="Not-so-secret Secret Tunnel" onclick="s3()"></input>'
+      +'<input type="button" value="South" onclick="p33()"></input>';}
 }
 
 function p62(){
@@ -134,18 +152,18 @@ function p62(){
       }else{
         document.getElementById('storyDiv').innerHTML = "Hallway 62. Battle."
         +'<br><input type="button" value="West" onclick="p60()"></input>'
-        +'<input type="butotn" value="East" onclick=p64()"></input>';}
+        +'<input type="button" value="East" onclick="p64()"></input>';}
 }
 
 function p63(){
   document.getElementById('storyDiv').innerHTML = "Corner 63"
-  +'<br><input type="butotn" value="South" onclick="p65()"></input>'
+  +'<br><input type="button" value="South" onclick="p65()"></input>'
   +'<input type="button" value="East" onclick="p53()"></input>';
 }
 
 function p64(){
   document.getElementById('storyDiv').innerHTML = "hallway 64."
-  +'<br><input type="butotn" value="West" onclick="p62()"></input>'
+  +'<br><input type="button" value="West" onclick="p62()"></input>'
   +'<input type="button" value="East" onclick="p66()"></input>';
 }
 

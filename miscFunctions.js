@@ -7,12 +7,17 @@ function storyDisable(){
     }
 }
 
+function d12(){
+  return parseFloat(Math.floor(Math.random()*12+1));
+}
+
 function d20(){
   return parseFloat(Math.floor(Math.random()*20+1));
 }
 
 function ID(){
-  document.getElementById('idDiv').innerHTML = 'Name:'  + player.name + ',' + '   ' + 'Class: ' + player.spec + ',' + '   ' + 'Attack Value: ' + player.atk + '<hr>'
+  document.getElementById('idDiv').innerHTML = 'Name:'  + player.name + ',' + '   ' + 'Class: ' + player.spec + ',' + '   ' + 'Attack Value: ' + player.atk + '   ' 
+  + 'Health: ' + player.hp + '<hr>';
 }
 
 function RandomOneOf(list){
@@ -20,8 +25,9 @@ function RandomOneOf(list){
 }
 
 function dead(){
+if(player.hp<=0){
   document.getElementById('storyDiv').innerHTML = "You have died."
-  +'<br><input type="button" value="Restart your adventure" onclick="location.reload()"></input>';
+  +'<br><input type="button" value="Restart your adventure" onclick="location.reload()"></input>';}
 }
 
 function crushed(){
@@ -31,4 +37,12 @@ function crushed(){
 
 function stopTimeout(timer){
   clearTimeout(timer);
+}
+
+function orcAtk(){
+  return orc.atk+d12();
+}
+
+function playerMaxHP(){
+  return player.maxhp = player.hp
 }

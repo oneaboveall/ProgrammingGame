@@ -5,9 +5,16 @@ function p23(){
 }
 
 function p24(){
-  document.getElementById('storyDiv').innerHTML = "Hallway 24."
-  + '<br><input type="button" value="West" onclick="p22()"></input>'
-  + '<input type="button" value="Enter Room" onclick="r7()"></input>';
+  if (p24Fight < 1){
+    p24F();
+    p24Fight++;
+      document.getElementById('storyDiv').innerHTML = "You are attacked by an orc! T 24."
+      + '<br><input type="button" value=' + player.spl1 + ' onclick="p24F()"></input>';
+      } else{
+        document.getElementById('storyDiv').innerHTML = "Hallway 24. Battle"
+        + '<br><input type="button" value="West" onclick="p22()"></input>'
+        + '<input type="button" value="Enter Room" onclick="r7()"></input>';
+        }
 }
 
 function p25(){
@@ -23,27 +30,54 @@ function p25(){
 }
 
 function p26(){
-  document.getElementById('storyDiv').innerHTML = "Hallway 26. Collapse."
-  + '<br><input type="button" value="North" onclick="p24()"></input>'
-  +'<input type="button" value="South" onclick="p28()"></input>';
+if (p26Collapse < 1){
+    p26C();
+    p26Collapse++;
+      document.getElementById('storyDiv').innerHTML = "You are about to be crushed!"
+        +'<br><input type="button" value="MOVE!" onclick="p24()"></input>'
+        +'<input type="button" value="MOVE!" onclick="p28()"></input>';
+    } else{
+        stopTimeout(p26Ctime);
+        document.getElementById('storyDiv').innerHTML = "Hallway 26. Collapse."
+        + '<br><input type="button" value="North" onclick="p22()"></input>'
+        +'<input type="button" value="South" onclick="p28()"></input>';}
 }
 
 function p27(){
-  document.getElementById('storyDiv').innerHTML = "Hallway 27."
-  +'<br><input type="button" value="West" onclick="r2()"></input>'
-  +'<input type="button" value="East" onclick="p29()"></input>';
+  if (p29Collapse < 1){
+    document.getElementById('storyDiv').innerHTML = "Hallway 27."
+    +'<br><input type="button" value="West" onclick="r2()"></input>'
+    +'<input type="button" value="East" onclick="p29()"></input>';
+    } else{
+        stopTimeout(p29Ctime);
+        document.getElementById('storyDiv').innerHTML = "Hallway 27. Collapsed, cannot get to p29."
+        +'<input type="button" value="Enter Room" onclick="r2()"></input>';}
 }
 
 function p28(){
-  document.getElementById('storyDiv').innerHTML = "Hallway 28."
-  +'<br><input type="button" value="North" onclick="26()"></input>'
-  +'<input type="button" vlaue="South" onclick="30()"></input>'
+  if (p26Collapse > 1){
+    document.getElementById('storyDiv').innerHTML = "Hallway 28."
+    +'<br><input type="button" value="North" onclick="p26()"></input>'
+    +'<input type="button" value="South" onclick="p30()"></input>';
+    } else{
+        stopTimeout(p26Ctime);
+        document.getElementById('storyDiv').innerHTML = "Hallway 28. no p26 access."
+        +'<input type="button" value="South" onclick="p30()"></input>';
+        }
 }
 
 function p29(){
-  document.getElementById('storyDiv').innerHTML = "Hallway 29.  Collapse!"
-  +'<br><input type="button" value="West" onclick="p27()"></input>'
-  +'<input type="button" value="East" onclick="p31()"></input>';
+  if (p29Collapse < 1){
+    p29C();
+    p29Collapse++
+    document.getElementById('storyDiv').innerHTML = "You are about to be crushed!"
+      +'<br><input type="button" value="MOVE!" onclick="p27()"></input>'
+      +'<br><input type="button" value="MOVE!" onclick="p31()"></input>';
+    } else{
+        stopTimeout(p29Ctime);
+        document.getElementById('storyDiv').innerHTML = "Hallway 29.  Collapse!"
+        +'<br><input type="button" value="West" onclick="p27()"></input>'
+        +'<input type="button" value="East" onclick="p31()"></input>';}
 }
 
 function p30(){
@@ -59,13 +93,19 @@ function p30(){
 }
 
 function p31(){
-  document.getElementById('storyDiv').innerHTML = "Hallway 31. Tunnel has collapsed behind you."
-  +'<br><input type="button" value="East" onclick="p33()"></input>';
+  if (p29Collapse < 1){
+    document.getElementById('storyDiv').innerHTML = "Hallway 31."
+    +'<br><input type="button" value="West" onclick="p29()"></input>'
+    +'<input type="button" value="East" onclick="p33()"></input>';
+  } else{
+      stopTimeout(p29Ctime);
+      document.getElementById('storyDiv').innerHTML = "Hallway 31. Collapsed, cannot get to p29."
+      +'<input type="button" value="East" onclick="p33()"></input>';}
 }
 
 function p32(){
   document.getElementById('storyDiv').innerHTML = "Corner 32"
-  +'<br><input type="button" value="West" onclick="p34"></input>'
+  +'<br><input type="button" value="West" onclick="p34()"></input>'
   +'<input type="button" value="North" onclick="p30()"></input>';
 }
 
@@ -75,7 +115,7 @@ function p33(){
     p33Fight++;
       document.getElementById('storyDiv').innerHTML = "You are attacked by an orc! T 33."
       + '<br><input type="button" value=' + player.spl1 + ' onclick="p33F()"></input>';
-      }else{
+      } else{
         document.getElementById('storyDiv').innerHTML = "T 33. Battle."
         +'<br><input type="button" value="West" onclick="p31()"></input>'
         +'<input type="button" value="North" onclick="p61()"></input>'
@@ -121,9 +161,14 @@ function p39(){
 }
 
 function p40(){
-  document.getElementById('storyDiv').innerHTML = "Hallway 40."
-  +'<br><input type="button" value="North" onclick="p36()"></input>'
-  +'<input type="button" value="South" onclick="p44()"></input>';
+  if (p44Collapse < 1){
+    document.getElementById('storyDiv').innerHTML = "Hallway 40."
+    +'<br><input type="button" value="North" onclick="p36()"></input>'
+    +'<input type="button" value="South" onclick="p44()"></input>';
+    } else{
+      stopTimeout(p44Ctime);
+      document.getElementById('storyDiv').innerHTML = "Hallway 40. Collapsed, cannot get to p44."
+      +'<input type="button" value="North" onclick="p36()"></input>';}
 }
 
 function p41(){
@@ -164,9 +209,16 @@ function p43(){
 }
 
 function p44(){
-  document.getElementById('storyDiv').innerHTML = "Hallway 44. Collapse."
-  +'<br><input type="button" value="North" onclick="p40()"></input>'
-  +'<input type="button" value="South" onclick="p46()"></input>';
+  if (p44Collapse < 1){
+    p44C();
+    p44Collapse++;
+    document.getElementById('storyDiv').innerHTML = "You are about to be crushed!"
+      +'<br><input type="button" value="MOVE!" onclick="p40()"></input>'
+      +'<input type="button" value="MOVE!" onclick="p46()"></input>';
+  } else{
+      document.getElementById('storyDiv').innerHTML = "Hallway 44. Collapse."
+      +'<br><input type="button" value="North" onclick="p40()"></input>'
+      +'<input type="button" value="South" onclick="p46()"></input>';}
 }
 
 function p45(){
@@ -176,7 +228,12 @@ function p45(){
 }
 
 function p46(){
-  document.getElementById('storyDiv').innerHTML = "Hallway 46."
-  +'<br><input type="button" value="North" onclick="p44()"></input>'
-  +'<input type="button" value="South" onclick="p48()"></input>';
+  if (p44Collapse < 1){
+    document.getElementById('storyDiv').innerHTML = "Hallway 46."
+    +'<br><input type="button" value="North" onclick="p44()"></input>'
+    +'<input type="button" value="South" onclick="p48()"></input>';
+  } else{
+      stopTimeout(p44Ctime);
+      document.getElementById('storyDiv').innerHTML = "Hallway 46. Collapsed, cannot get to p44."
+      +'<input type="button" value="South" onclick="p48()"></input>';}
 }

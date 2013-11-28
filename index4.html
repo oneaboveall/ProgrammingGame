@@ -15,11 +15,19 @@
   <script src="counters.js" type="text/javascript" language="javascript"></script>
   <script src="magicFights.js" type="text/javascript" language="javascript"></script>
   <script src="collapses.js" type="text/javascript" language="javascript"></script>
+  <script src="assassinFight.js" type="text/javascript" language="javascript"></script>
+  <script src="hostileNPC.js" type="text/javascript" language="javascript"></script>
+  <script src="commanderFight.js" type="text/javascript" language="javascript"></script>
+  <script src="priestFight.js" type="text/javascript" language="javascript"></script>
+  <script src="sorcererFight.js" type="text/javascript" language="javascript"></script>
+  <script src="golemFight.js" type="text/javascript" language="javascript"></script>
+  <script src="dragonFight.js" type="text/javascript" language="javascript"></script>
+  <script src="partyMembers.js" type="text/javascript" language="javascript"></script>
+  <script src="partyMemberEvents.js" type="text/javascript" language="javascript"></script>
 </head>
 <body onload="storyDisable()">
   <h1 style="text-align:center">Awesome Epic Adventure</h1>
-  <div id="idDiv">
-  </div>
+  <span id="idDiv"></span><span style="text-align:right" id="enemySpan"></span>
   <div id="startDiv">
   Enter your Name<input type="text" size="20" value="" id="namebox">
   <br>
@@ -41,7 +49,7 @@
   <input type="button" value="Start your story" id="stobutton"
     onclick="storyStart()"></input>
     <input type="button" value="command test"
-      onclick="alert(orc.atk)"></input>
+      onclick="alert(pm1.name)"></input>
   </div>
   <div id="storyDiv" style="text-align:center"></div>
 </body>
