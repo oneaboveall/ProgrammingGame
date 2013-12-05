@@ -8,7 +8,7 @@ if (pFCounter < 1){
   +'<input type="button" value="TEST AHP" onclick="alert(pFCounter)"></input>'
   +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';}
     else {
-    blkAlter();}
+    golemroom();}
 }
 
 function GFS1(){

@@ -21,7 +21,7 @@ function p49(){
       }else{
         document.getElementById('storyDiv').innerHTML = "Hallway 49."
         +'<br><input type="button" value="North" onclick="p47()"></input>'
-        +'<input type="button" value="South" onclick="blkalter()"></input';}
+        +'<input type="button" value="Enter Black Alter" onclick="blkalter()"></input';}
 }
 
 function p50(){
@@ -45,7 +45,7 @@ function p51(){
       }else{
         document.getElementById('storyDiv').innerHTML = "Hallway 51. Battle."
         +'<br><input type="button" value="West" onclick="p47()"></input>'
-        +'<input type="button" value="East" onclick="barracks()"></input>';}
+        +'<input type="button" value="Enter Barracks" onclick="barracks()"></input>';}
 }
 
 function p52(){
@@ -63,7 +63,7 @@ function p53(){
       }else{
         document.getElementById('storyDiv').innerHTML = "T 53. Battle."
         +'<br><input type="button" value="West" onclick="p63()"></input>'
-        +'<input type="button" value="North" onclick="barracks()"></input>'
+        +'<input type="button" value="Enter Barracks" onclick="barracks()"></input>'
         +'<input type="button"  value="South" onclick="p55()"></input>';}
 }
 

@@ -1,5 +1,5 @@
 function sorcererFight(){
-if (cFCounter < 1){
+if (sFCounter < 1){
   ID();
   player.maxhp=player.hp;
   document.getElementById('storyDiv').innerHTML = "You are in combat with the Sorcerer...good luck!"

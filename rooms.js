@@ -4,6 +4,7 @@ function r1(){
 }
 
 function r2(){
+  pm2Find();
   document.getElementById('storyDiv').innerHTML = 'R2. Meet Class #2 and add to party.'
   + '<br><p></p>'
   + '<br><input type="button" value="North" onclick="p25()"></input>'
