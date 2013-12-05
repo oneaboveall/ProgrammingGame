@@ -4,6 +4,7 @@ if (dFCounter < 1){
   document.getElementById('storyDiv').innerHTML = "You are in combat with the dragon...good luck!"
   +'<br><input type="button" value=' + player.spl1 + ' onclick="DFS1()"></input>'
   +'<input type="button" value=' + player.spl2 + ' onclick="DFS2()"></input>'
+  +'<input type="button" value=' + player.spl3 + ' onclick="DFS3()"></input>'
   +'<input type="button" value="TEST AHP" onclick="alert(pFCounter)"></input>'
   +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';}
     else {
@@ -15,7 +16,7 @@ function DFS1(){
     document.getElementById('storyDiv').innerHTML = "You are in combat with the dragon. WINNING!"
     +'<br><input type="button" value=' + player.spl1 + ' onclick="DFS1()"></input>'
     +'<input type="button" value=' + player.spl2 + ' onclick="DFS2()"></input>'
-    +'<input type="button" value=' + player.spl3 + ' onclick="DSF3()"></input>';
+    +'<input type="button" value=' + player.spl3 + ' onclick="DFS3()"></input>';
     dragon.hp = dragon.hp-player.atk;
     dDead();
     ID();
@@ -24,7 +25,7 @@ function DFS1(){
       document.getElementById('storyDiv').innerHTML = "You are in combat with the dragon. NOT WINNING!"
       +'<br><input type="button" value=' + player.spl1 + ' onclick="DFS1()"></input>'
       +'<input type="button" value=' + player.spl2 + ' onclick="DFS2()"></input>'
-      +'<input type="button" value=' + player.spl3 + ' onclick="DSF3()"></input>'
+      +'<input type="button" value=' + player.spl3 + ' onclick="DFS3()"></input>'
       +'<input type="button" value="TEST AHP" onclick="alert(dragon.hp)"></input>'
       +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';
       player.hp = player.hp-dragon.atk;
@@ -37,7 +38,7 @@ function DFS2(){
     document.getElementById('storyDiv').innerHTML = "You are in combat with the dragon. WINNING!"
     +'<br><input type="button" value=' + player.spl1 + ' onclick="DFS1()"></input>'
     +'<input type="button" value=' + player.spl2 + ' onclick="DFS2()"></input>'
-    +'<input type="button" value=' + player.spl3 + ' onclick="DSF3()"></input>';
+    +'<input type="button" value=' + player.spl3 + ' onclick="DFS3()"></input>';
     dragon.hp = dragon.hp - 3*player.atk;
     dDead();
     ID();}
@@ -45,7 +46,7 @@ function DFS2(){
       document.getElementById('storyDiv').innerHTML = "You are in combat with the dragon. NOT WINNING!"
       +'<br><input type="button" value=' + player.spl1 + ' onclick="DFS1()"></input>'
       +'<input type="button" value=' + player.spl2 + ' onclick="DFS2()"></input>'
-      +'<input type="button" value=' + player.spl3 + ' onclick="DSF3()"></input>'
+      +'<input type="button" value=' + player.spl3 + ' onclick="DFS3()"></input>'
       +'<input type="button" value="TEST AHP" onclick="alert(dragon.hp)"></input>'
       +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';
       player.hp = player.hp - 3*dragon.atk;
@@ -58,7 +59,7 @@ function DFS3(){
     document.getElementById('storyDiv').innerHTML = "You are in combat with the dragon. WINNING!"
     +'<br><input type="button" value=' + player.spl1 + ' onclick="DFS1()"></input>'
     +'<input type="button" value=' + player.spl2 + ' onclick="DFS2()"></input>'
-    +'<input type="button" value=' + player.spl3 + ' onclick="DSF3()"></input>';
+    +'<input type="button" value=' + player.spl3 + ' onclick="DFS3()"></input>';
     dragon.hp = dragon.hp - 5*player.atk;
     dDead();
     ID();}
@@ -66,7 +67,7 @@ function DFS3(){
       document.getElementById('storyDiv').innerHTML = "You are in combat with the dragon. NOT WINNING!"
       +'<br><input type="button" value=' + player.spl1 + ' onclick="DFS1()"></input>'
       +'<input type="button" value=' + player.spl2 + ' onclick="DFS2()"></input>'
-      +'<input type="button" value=' + player.spl3 + ' onclick="DSF3()"></input>'
+      +'<input type="button" value=' + player.spl3 + ' onclick="DFS3()"></input>'
       +'<input type="button" value="TEST AHP" onclick="alert(dragon.hp)"></input>'
       +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';
       player.hp = player.hp - 5*dragon.atk;
