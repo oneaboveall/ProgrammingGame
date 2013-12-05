@@ -27,8 +27,7 @@ function RandomOneOf(list){
 function dead(){
 if(player.hp<=0){
   document.getElementById('storyDiv').innerHTML = "You have died."
-  +'<br><input type="button" value="Restart your adventure" onclick="location.reload()"></input>'
-  +'<input type="button" value="Huh?" onclick="alert(\'You have died...do you need an explination?\')"></input>';}
+  +'<br><input type="button" value="Restart your adventure" onclick="location.reload()"></input>';}
 }
 
 function crushed(){
@@ -46,8 +45,4 @@ function orcAtk(){
 
 function playerMaxHP(){
   return player.maxhp = player.hp
-}
-
-function help(){
-  window.open('help.html');
 }

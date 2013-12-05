@@ -1,18 +1,18 @@
 function toDungeon (){
-  document.getElementById('storyDiv').innerHTML = "You have entered the dungeon, Which way do you head?"
+  document.getElementById('storyDiv').innerHTML = "When you enter the dungeon, you see two hallways, one heading east and one heading south. Which way do you go?"
   +'<br><input type="button" value="South" onclick="p1()"></input>'
   +'<input type="button" value="East" onclick="p2()"></input>';
 }
 
 function p1(){
-  document.getElementById('storyDiv').innerHTML = "Hallway 1"
+  document.getElementById('storyDiv').innerHTML = "You travel along the hallway. The floor is mostly dirt with some old stone scattered about. Torches line the walls but provide little light as you move deeper into the dungeon. Do you continue moving south, or head north?"
   +'<br><input type="button" value="North" onclick="toDungeon()"></input>'
   +'<input type="button" value="South" onclick="p3()"></input>'
   +'<input type="button" value="TEST" onclick="alert(p5Collapse)"></input>';
 }
 
 function p2(){
-  document.getElementById('storyDiv').innerHTML = 'Hallway 2.'
+  document.getElementById('storyDiv').innerHTML = 'The hallway is dark and moves .'
   +'<br><input type="button" value="West" onclick="toDungeon()"></input>'
   +'<input type="button" value="East" onclick="p4()"></input>';
 }
