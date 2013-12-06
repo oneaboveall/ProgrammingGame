@@ -4,9 +4,7 @@ if (pFCounter < 1){
   player.maxhp=player.hp;
   document.getElementById('storyDiv').innerHTML = "You are in combat with the priest...good luck!"
   +'<br><input type="button" value=' + player.spl1 + ' onclick="PFS1()"></input>'
-  +'<input type="button" value=' + player.spl2 + ' onclick="PFS2()"></input>'
-  +'<input type="button" value="TEST AHP" onclick="alert(pFCounter)"></input>'
-  +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';}
+  +'<input type="button" value=' + player.spl2 + ' onclick="PFS2()"></input>';}
     else {
     blkAlter();}
 }
@@ -23,9 +21,7 @@ function PFS1(){
     else{
       document.getElementById('storyDiv').innerHTML = "You are in combat with the Priest. NOT WINNING!"
       +'<br><input type="button" value=' + player.spl1 + ' onclick="PFS1()"></input>'
-      +'<input type="button" value=' + player.spl2 + ' onclick="PFS2()"></input>'
-      +'<input type="button" value="TEST AHP" onclick="alert(Priest.hp)"></input>'
-      +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';
+      +'<input type="button" value=' + player.spl2 + ' onclick="PFS2()"></input>';
       player.hp = player.maxhp-Priest.atk;
       dead();
       ID();}
@@ -42,9 +38,7 @@ function PFS2(){
     else{
       document.getElementById('storyDiv').innerHTML = "You are in combat with the Priest. NOT WINNING!"
       +'<br><input type="button" value=' + player.spl1 + ' onclick="PFS1()"></input>'
-      +'<input type="button" value=' + player.spl2 + ' onclick="PFS2()"></input>'
-      +'<input type="button" value="TEST AHP" onclick="alert(Priest.hp)"></input>'
-      +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';
+      +'<input type="button" value=' + player.spl2 + ' onclick="PFS2()"></input>';
       player.hp = player.hp - 3*Priest.atk;
       dead();
       ID();}

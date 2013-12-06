@@ -4,9 +4,7 @@ if (sFCounter < 1){
   player.maxhp=player.hp;
   document.getElementById('storyDiv').innerHTML = "You are in combat with the Sorcerer...good luck!"
   +'<br><input type="button" value=' + player.spl1 + ' onclick="SFS1()"></input>'
-  +'<input type="button" value=' + player.spl2 + ' onclick="SFS2()"></input>'
-  +'<input type="button" value="TEST AHP" onclick="alert(cFCounter)"></input>'
-  +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';}
+  +'<input type="button" value=' + player.spl2 + ' onclick="SFS2()"></input>';}
     else {
     sorcerersChamber();}
 }
@@ -23,9 +21,7 @@ function SFS1(){
     else{
       document.getElementById('storyDiv').innerHTML = "You are in combat with the Sorcerer. NOT WINNING!"
       +'<br><input type="button" value=' + player.spl1 + ' onclick="SFS1()"></input>'
-      +'<input type="button" value=' + player.spl2 + ' onclick="SFS2()"></input>'
-      +'<input type="button" value="TEST AHP" onclick="alert(Sorcerer.hp)"></input>'
-      +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';
+      +'<input type="button" value=' + player.spl2 + ' onclick="SFS2()"></input>';
       player.hp = player.hp-Sorcerer.atk;
       dead();
       ID();}
@@ -42,9 +38,7 @@ function SFS2(){
     else{
       document.getElementById('storyDiv').innerHTML = "You are in combat with the Sorcerer. NOT WINNING!"
       +'<br><input type="button" value=' + player.spl1 + ' onclick="SFS1()"></input>'
-      +'<input type="button" value=' + player.spl2 + ' onclick="SFS2()"></input>'
-      +'<input type="button" value="TEST AHP" onclick="alert(Sorcerer.hp)"></input>'
-      +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';
+      +'<input type="button" value=' + player.spl2 + ' onclick="SFS2()"></input>';
       player.hp = player.hp - 3*Sorcerer.atk;
       dead();
       ID();}

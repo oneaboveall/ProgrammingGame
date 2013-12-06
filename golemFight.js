@@ -4,9 +4,7 @@ if (pFCounter < 1){
   player.maxhp=player.hp
   document.getElementById('storyDiv').innerHTML = "You are engaged by a rock golem! Show this walking piece of unfinished masonry whose boss!"
   +'<br><input type="button" value=' + player.spl1 + ' onclick="GFS1()"></input>'
-  +'<input type="button" value=' + player.spl2 + ' onclick="GFS2()"></input>'
-  +'<input type="button" value="TEST AHP" onclick="alert(pFCounter)"></input>'
-  +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';}
+  +'<input type="button" value=' + player.spl2 + ' onclick="GFS2()"></input>';}
     else {
     golemroom();}
 }
@@ -23,9 +21,7 @@ function GFS1(){
     else{
       document.getElementById('storyDiv').innerHTML = "You are being bested by a rock! Seriously! Fight harder!"
       +'<br><input type="button" value=' + player.spl1 + ' onclick="GFS1()"></input>'
-      +'<input type="button" value=' + player.spl2 + ' onclick="GFS2()"></input>'
-      +'<input type="button" value="TEST AHP" onclick="alert(golem.hp)"></input>'
-      +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';
+      +'<input type="button" value=' + player.spl2 + ' onclick="GFS2()"></input>';
       player.hp = player.hp-golem.atk;
       dead();
       ID();}
@@ -42,9 +38,7 @@ function GFS2(){
     else{
       document.getElementById('storyDiv').innerHTML = "This thing is barely animate! Its pretty much something that you could kick down the road on accident. How are you losing to this thing?!"
       +'<br><input type="button" value=' + player.spl1 + ' onclick="GFS1()"></input>'
-      +'<input type="button" value=' + player.spl2 + ' onclick="GFS2()"></input>'
-      +'<input type="button" value="TEST AHP" onclick="alert(golem.hp)"></input>'
-      +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';
+      +'<input type="button" value=' + player.spl2 + ' onclick="GFS2()"></input>';
       player.hp = player.hp - 3*golem.atk;
       dead();
       ID();}

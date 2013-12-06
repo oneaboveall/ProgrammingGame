@@ -34,7 +34,7 @@ if (p26Collapse < 1){
     p26C();
     p26Collapse++;
       document.getElementById('storyDiv').innerHTML = "You are about to be crushed!"
-        +'<br><input type="button" value="MOVE!" onclick="p24()"></input>'
+        +'<br><input type="button" value="MOVE!" onclick="p22()"></input>'
         +'<input type="button" value="MOVE!" onclick="p28()"></input>';
     } else{
         stopTimeout(p26Ctime);

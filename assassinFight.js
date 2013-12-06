@@ -4,9 +4,7 @@ if (aFCounter < 1){
   player.maxhp=player.hp
   document.getElementById('storyDiv').innerHTML = "You enter a large, dark room and hear the quick movement on something in the shadows. An assassin steps from the shadows and draws his blade. You must strike him down!"
   +'<br><input type="button" value=' + player.spl1 + ' onclick="AFS1()"></input>'
-  +'<input type="button" value=' + player.spl2 + ' onclick="AFS2()"></input>'
-  +'<input type="button" value="TEST AHP" onclick="alert(aFCounter)"></input>'
-  +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';}
+  +'<input type="button" value=' + player.spl2 + ' onclick="AFS2()"></input>';}
     else {
     assassin();}
 }
@@ -23,9 +21,7 @@ function AFS1(){
     else{
       document.getElementById('storyDiv').innerHTML = "The Assassin hits you with the force of a thousand suns! You must retaliate before it\'s too late!"
       +'<br><input type="button" value=' + player.spl1 + ' onclick="AFS1()"></input>'
-      +'<input type="button" value=' + player.spl2 + ' onclick="AFS2()"></input>'
-      +'<input type="button" value="TEST AHP" onclick="alert(Assassin.hp)"></input>'
-      +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';
+      +'<input type="button" value=' + player.spl2 + ' onclick="AFS2()"></input>';
       player.hp = player.hp-Assassin.atk;
       dead();
       ID();}
@@ -42,9 +38,7 @@ function AFS2(){
     else{
       document.getElementById('storyDiv').innerHTML = "The assassin is besting you! Lo, though the time is dark you must not fear!"
       +'<br><input type="button" value=' + player.spl1 + ' onclick="AFS1()"></input>'
-      +'<input type="button" value=' + player.spl2 + ' onclick="AFS2()"></input>'
-      +'<input type="button" value="TEST AHP" onclick="alert(Assassin.hp)"></input>'
-      +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';
+      +'<input type="button" value=' + player.spl2 + ' onclick="AFS2()"></input>';
       player.hp = player.hp - 3*Assassin.atk;
       dead();
       ID();}

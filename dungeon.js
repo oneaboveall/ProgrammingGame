@@ -7,8 +7,7 @@ function toDungeon (){
 function p1(){
   document.getElementById('storyDiv').innerHTML = "You travel along the hallway. The floor is mostly dirt with some old stone scattered about. Torches line the walls but provide little light as you move deeper into the dungeon. Do you continue moving south, or head north?"
   +'<br><input type="button" value="North" onclick="toDungeon()"></input>'
-  +'<input type="button" value="South" onclick="p3()"></input>'
-  +'<input type="button" value="TEST" onclick="alert(p5Collapse)"></input>';
+  +'<input type="button" value="South" onclick="p3()"></input>';
 }
 
 function p2(){
@@ -60,14 +59,12 @@ function p7(){
         document.getElementById('storyDiv').innerHTML = "A hallway leads easterly, with ominious blood spatterings on the walls. You cannot tell if they were made by man or beast, but you weigh the options of finding out in either event. Which way do you choose?"
         +'<br><input type="button" value="North" onclick="p5()"></input>'
         +'<input type="button" value="South" onclick="p11()"></input>'
-        +'<input type="button" value="East" onclick="p9()"></input>'
-        +'<input type="button" value="Test" onclick="alert(p7Fight)"></input>';
+        +'<input type="button" value="East" onclick="p9()"></input>';
         } else{
         stopTimeout(p5Ctime);
         document.getElementById('storyDiv').innerHTML = "You are at another intersection. Debris has fallen, you cannot get to the northerly path."
         +'<input type="button" value="South" onclick="p11()"></input>'
-        +'<input type="button" value="East" onclick="p9()"></input>'
-        +'<input type="button" value="Test" onclick="alert(p7Fight)"></input>'}
+        +'<input type="button" value="East" onclick="p9()"></input>';}
 }
 
 function p8(){
@@ -79,8 +76,7 @@ function p8(){
 function p9(){
   document.getElementById('storyDiv').innerHTML = "The blood spatterings on the wall increase as you head east. Just as your feeling of dread grows into a lump in your throat, you are pleasantly surprised by A RANDOM ENCOUNTER!"
   + '<br><input type="button" value="Enter Assassin\'s Gallery" onclick="assassinFight()"></input>'
-  + '<input type="button" value="West" onclick="p7()"></input>'
-  +'<input type="button" value="TEST" onclick="alert(Assassin.hp)"></input>';
+  + '<input type="button" value="West" onclick="p7()"></input>';
 }
 
 function p10(){

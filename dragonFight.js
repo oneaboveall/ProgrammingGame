@@ -4,9 +4,7 @@ if (dFCounter < 1){
   document.getElementById('storyDiv').innerHTML = "This is it. This is the beast you must defeat to save the hapless, lazy villagers of Clintonia. You are are their only hope. You let loose a defeaning war cry at fly at the mighty black beast. Failure is not an option!"
   +'<br><input type="button" value=' + player.spl1 + ' onclick="DFS1()"></input>'
   +'<input type="button" value=' + player.spl2 + ' onclick="DFS2()"></input>'
-  +'<input type="button" value=' + player.spl3 + ' onclick="DFS3()"></input>'
-  +'<input type="button" value="TEST AHP" onclick="alert(pFCounter)"></input>'
-  +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';}
+  +'<input type="button" value=' + player.spl3 + ' onclick="DFS3()"></input>';}
     else {
     lair();}
 }
@@ -25,9 +23,7 @@ function DFS1(){
       document.getElementById('storyDiv').innerHTML = "Run-Time error! The dragon engulfs you in black fire. You may not be able to take another hit like that!"
       +'<br><input type="button" value=' + player.spl1 + ' onclick="DFS1()"></input>'
       +'<input type="button" value=' + player.spl2 + ' onclick="DFS2()"></input>'
-      +'<input type="button" value=' + player.spl3 + ' onclick="DFS3()"></input>'
-      +'<input type="button" value="TEST AHP" onclick="alert(dragon.hp)"></input>'
-      +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';
+      +'<input type="button" value=' + player.spl3 + ' onclick="DFS3()"></input>';
       player.hp = player.hp-dragon.atk;
       dead();
       ID();}
@@ -46,9 +42,7 @@ function DFS2(){
       document.getElementById('storyDiv').innerHTML = "DANGER! The dragon hacks your internets with a mighty swipe of its tail! YOU MUST FINISH HIM QUICK! You are hurt badly and things are looking grim..."
       +'<br><input type="button" value=' + player.spl1 + ' onclick="DFS1()"></input>'
       +'<input type="button" value=' + player.spl2 + ' onclick="DFS2()"></input>'
-      +'<input type="button" value=' + player.spl3 + ' onclick="DFS3()"></input>'
-      +'<input type="button" value="TEST AHP" onclick="alert(dragon.hp)"></input>'
-      +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';
+      +'<input type="button" value=' + player.spl3 + ' onclick="DFS3()"></input>';
       player.hp = player.hp - 3*dragon.atk;
       dead();
       ID();}
@@ -67,9 +61,7 @@ function DFS3(){
       document.getElementById('storyDiv').innerHTML = "CRITICAL ERROR! The dragon is making you look like a script kiddy with his incredible skills! Dont let your n00bery be your demise!"
       +'<br><input type="button" value=' + player.spl1 + ' onclick="DFS1()"></input>'
       +'<input type="button" value=' + player.spl2 + ' onclick="DFS2()"></input>'
-      +'<input type="button" value=' + player.spl3 + ' onclick="DFS3()"></input>'
-      +'<input type="button" value="TEST AHP" onclick="alert(dragon.hp)"></input>'
-      +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';
+      +'<input type="button" value=' + player.spl3 + ' onclick="DFS3()"></input>';
       player.hp = player.hp - 5*dragon.atk;
       dead();
       ID();}

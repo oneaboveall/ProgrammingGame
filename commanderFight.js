@@ -4,9 +4,7 @@ if (cFCounter < 1){
   player.maxhp=player.hp;
   document.getElementById('storyDiv').innerHTML = "When you enter the room you encounter an enourmous ork clothed in ebony armor and sitting on a throne of human skulls! He is drinking marrow from a bone and reeks cheap alcohol! When he notices you, he lifts a gigantic cleaver and charges you. You must destroy this scum! "
   +'<br><input type="button" value=' + player.spl1 + ' onclick="CFS1()"></input>'
-  +'<input type="button" value=' + player.spl2 + ' onclick="CFS2()"></input>'
-  +'<input type="button" value="TEST AHP" onclick="alert(cFCounter)"></input>'
-  +'<input type="button" value="TEST PHP" onclick="alert(player.hp)"></input>';}
+  +'<input type="button" value=' + player.spl2 + ' onclick="CFS2()"></input>';}
     else {
     barracks();}
 }
@@ -15,9 +13,7 @@ function CFS1(){
   if (player.atk+d20()+50>= commander.atk+d12()){
     document.getElementById('storyDiv').innerHTML = "You use your " + player.spl1 + " ability and land it on his hideous ork face! Blood flows freely from the beasts maw!"
     +'<br><input type="button" value=' + player.spl1 + ' onclick="CFS1()"></input>'
-    +'<input type="button" value=' + player.spl2 + ' onclick="CFS2()"></input>'
-    +'<input type="button" value="TEST AHP" onclick="alert(commander.hp)"></input>'
-    +'<input type="button" value="TEST AHP" onclick="alert(commander.atk)"></input>';
+    +'<input type="button" value=' + player.spl2 + ' onclick="CFS2()"></input>';
     commander.hp = commander.hp-player.atk;
     fDead();
     ID();
@@ -25,9 +21,7 @@ function CFS1(){
     else{
       document.getElementById('storyDiv').innerHTML = "The ork commander slashes you across the torso with his cleaver! You are in tremendous pain and quickly think of how unsanitary that thing probably is!"
       +'<br><input type="button" value=' + player.spl1 + ' onclick="CFS1()"></input>'
-      +'<input type="button" value=' + player.spl2 + ' onclick="CFS2()"></input>'
-      +'<input type="button" value="TEST AHP" onclick="alert(commander.hp)"></input>'
-      +'<input type="button" value="TEST PHP" onclick="alert(commander.atk)"></input>';
+      +'<input type="button" value=' + player.spl2 + ' onclick="CFS2()"></input>';
       player.hp = player.hp-commander.atk;
       dead();
       ID();}
@@ -37,18 +31,14 @@ function CFS2(){
   if (player.atk+d20()+50 >= commander.atk+d12()){
     document.getElementById('storyDiv').innerHTML = "Your mighty " + player.spl2 + " skill stuns the beast! He begins cyring like a tiny girl! Pathetic! You are winning!"
     +'<br><input type="button" value=' + player.spl1 + ' onclick="CFS1()"></input>'
-    +'<input type="button" value=' + player.spl2 + ' onclick="CFS2()"></input>'
-    +'<input type="button" value="TEST AHP" onclick="alert(commander.hp)"></input>'
-      +'<input type="button" value="TEST PHP" onclick="alert(commander.atk)"></input>';
+    +'<input type="button" value=' + player.spl2 + ' onclick="CFS2()"></input>';
     commander.hp = commander.hp - 3*player.atk;
     fDead();
     ID();}
     else{
       document.getElementById('storyDiv').innerHTML = "Ze Ork Commandant retaliates with a vicious boot strike to your face! Your pride hurts more than your face, and your face hurts!"
       +'<br><input type="button" value=' + player.spl1 + ' onclick="CFS1()"></input>'
-      +'<input type="button" value=' + player.spl2 + ' onclick="CFS2()"></input>'
-      +'<input type="button" value="TEST AHP" onclick="alert(commander.hp)"></input>'
-      +'<input type="button" value="TEST PHP" onclick="alert(commander.atk)"></input>';
+      +'<input type="button" value=' + player.spl2 + ' onclick="CFS2()"></input>';
       player.hp = player.hp - 3*commander.atk;
       dead();
       ID();}
