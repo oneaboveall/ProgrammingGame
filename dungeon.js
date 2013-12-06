@@ -96,7 +96,7 @@ function p11(){
      document.getElementById('storyDiv').innerHTML = "You are attacked by an Orc while moving through the corridor! LETS GET IT ON."
         + '<br><input type="button" value=' + player.spl1 + ' onclick="p11F()"></input>';}
         else{
-          document.getElementById('storyDiv').innerHTML = "You defeated the ork and now must press forwar. Which way do you choose?"
+          document.getElementById('storyDiv').innerHTML = "You defeated the ork and now must press forward. Which way do you choose?"
           + '<br><input type="button" value="North" onclick="p7()"></input>'
           + '<input type="button" value="South" onclick="p13()"></input>';}
 }
