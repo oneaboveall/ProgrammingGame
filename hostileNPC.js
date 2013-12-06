@@ -3,12 +3,12 @@ var Sorcerer ={
   atk:1,
   spl1:'',
   spl2:'',
-  hp:10,
+  hp:100,
 };
 
 var Assassin ={
   name:'',
-  atk:2,
+  atk:5,
   spl1:'',
   spl2:'',
   hp:10,
@@ -19,7 +19,7 @@ var commander ={
   atk:5,
   spl1:'',
   spl2:'',
-  hp:30,
+  hp:100,
 };
 
 var Priest ={
@@ -27,7 +27,7 @@ var Priest ={
   atk:1,
   spl1:'',
   spl2:'',
-  hp:10,
+  hp:50,
 };
 
 var golem ={
@@ -35,12 +35,12 @@ var golem ={
   atk:10,
   spl1:'',
   spl2:'',
-  hp:100,
+  hp:200,
 };
 
 var dragon ={
   name:'',
-  atk:10,
+  atk:50,
   spl1:'',
   spl2:'',
   hp:500,

@@ -151,7 +151,7 @@ function p37(){
 function p38(){
   document.getElementById('storyDiv').innerHTML = "Another hallway."
   +'<br><input type="button" value="North" onclick="r4()"></input>'
-  +'<input type="button" value="South" onclick="p36"></input>';
+  +'<input type="button" value="South" onclick="p36()"></input>';
 }
 
 function p39(){
