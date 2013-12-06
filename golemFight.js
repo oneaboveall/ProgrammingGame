@@ -1,12 +1,12 @@
 function golemFight(){
-if (pFCounter < 1){
+if (gFCounter < 1){
   ID();
   player.maxhp=player.hp
   document.getElementById('storyDiv').innerHTML = "You are engaged by a rock golem! Show this walking piece of unfinished masonry whose boss!"
   +'<br><input type="button" value=' + player.spl1 + ' onclick="GFS1()"></input>'
   +'<input type="button" value=' + player.spl2 + ' onclick="GFS2()"></input>';}
     else {
-    golemroom();}
+    golemRoom();}
 }
 
 function GFS1(){

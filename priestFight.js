@@ -46,7 +46,7 @@ function PFS2(){
 
 function pDead(){
   if (Priest.hp <=0){
-    aFCounter++;
+    pFCounter++;
     player.maxhp=player.maxhp+3;
     player.atk=player.atk+3;
     player.hp=player.maxhp;

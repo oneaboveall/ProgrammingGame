@@ -6,7 +6,7 @@ function cleric(){
       player.name=namebox.value;
       player.spl1='Smite';
       player.spl2='Holy_Fire';
-      player.spl3='Holy_Nova';
+      player.spl3='Holy_Wrath';
       player.spl4='Heal';
       player.spl5='Circle_of_Healing';
       player.spl6='Holy_Shield';

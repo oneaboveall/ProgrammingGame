@@ -13,7 +13,7 @@ function pm2Find(){
   switch (player.spec){
     case player.spec === warrior:
       document.getElementById('storyDiv').innerHTML = "You have found a CLERIC companion.";
-    case player.spec === Cleric:
+    case player.spec === cleric:
       document.getElementById('storyDiv').innerHTML = "You have found a Rogue companion.";
     case player.spec === wizard:
       document.getElementById('storyDiv').innerHTML = "You have found a Rogue companion.";
@@ -26,7 +26,7 @@ function pm3Find(){
   switch (player.spec){
     case player.spec === warrior:
       document.getElementById('storyDiv').innerHTML = "You have found a warrior companion."
-    case player.spec === Cleric:
+    case player.spec === cleric:
     case player.spec === wizard:
     case player.spec === rogue:}
 }
