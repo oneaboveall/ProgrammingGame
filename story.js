@@ -24,15 +24,15 @@ function storyStart(){
 }
 
 function acceptQuest(){
-  document.getElementById('storyDiv').innerHTML= player.name + ":" + "I will help you!" + "<br><em>The crowd cheers in excitement!</em>"
-  + "<br><em>Looking around, you see that many people have come out of their homes in support of you.</em><br>"
+  document.getElementById('storyDiv').innerHTML= player.name + ":" + "HAVE NO FEAR INCREDIBLY OLD, CONDESCENDING WOMAN! I WILL EMBARK IMMEDIATELY TO SLAY THIS BEAST FOR THE GREATER GOOD!" + "<br><em>The crowd cheers in excitement!</em>"
+  + "<br><em>Looking around, you see that many people have come out of their homes in support of you. Most of them look flabby and unable to engage in combat in any meaningful way. Will you take this peasantry with you to slay the beast, or strike them all down in a glorious bit of maniacal rage?</em><br>"
   + '<input type="button" value="Head off with the people to slay the dragon" onclick="headout()"></input>'
   + '<input type="button" value="Kill the villiagers!" onclick="killVilliage()"></input>';
   
 }
 
 function denyQuest(){
-  document.getElementById('storyDiv').innerHTML = "You go home to live your live out in peace and die with an average life with nothing eventful happening."
+  document.getElementById('storyDiv').innerHTML = "You leave in shame and go home to live out your life in peace and die a meaningless death. No amount of soap could ever wash the stench of failure from your body."
   + '<br><input type="button" value="Restart your adventure...as if you ever started it" onclick="location.reload()"></input>';
 }
 
@@ -40,10 +40,10 @@ function killVilliage(){
   var deathRoll
     deathRoll = d20()
   if (deathRoll < 15){
-    document.getElementById('storyDiv').innerHTML = "You were not the hero they needed you to be! You obviously were not strong enough to defeat the dragon if the villiagers dispatched you!"
+    document.getElementById('storyDiv').innerHTML = "You were not the hero they needed you to be! You obviously were not strong enough to defeat the dragon if the villiagers dispatched you! Your carcass now serves as a smelly pinata for the villagers you attempted to slaughter!"
     + '<br><input type="button" value="Restart Adventure" onclick="location.reload()"></input>';
     } else{
-      document.getElementById('storyDiv').innerHTML = "You have murdered the vast majority of the villiagers! What will you do now?"
+      document.getElementById('storyDiv').innerHTML = "You have murdered the vast majority of the villiagers! Those not yet murderized accept that they cannot defeat you. What will you do now?"
       + '<br><input type="button" value="Head out" onclick="headout()"></input>';
 }
 }
@@ -59,7 +59,7 @@ function headout(){
         + '<input type="button" value="Chicken out like the other villiagers" onclick="denyQuest()"></input>';
     }
     else if (combat <21){
-      document.getElementById('storyDiv').innerHTML = "You are attacked by an Orc! You must be getting close!"
+      document.getElementById('storyDiv').innerHTML = "You are attacked by an unimpressive looking Orc! You must be getting close!"
         + '<br><input type="button" value=' + player.spl1 + ' onclick="fightRd()"></input>';
         sFight++;
       } else {
