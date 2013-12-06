@@ -53,9 +53,8 @@ function headout(){
     combat = d20();
     if (parseFloat(sFight) > 1){
       pm1Find();
-      document.getElementById('stryDiv').innerHTML = "Avoided Combat!"
-        + 'You come across the warrior, or the not warrior depending on code.'
-        + '<br><input type="button" value="Accept the Warrior\'s aid" onclick="toDungeon()"></input>'
+      document.getElementById('storyDiv').innerHTML = "<em>You come upto the dungeon where the supposed dragon lives.  You pass cliche D and D themed scenary, mostly medieval themed forests and shrubberies, with nothing of not happening until you come across an orc and human skeletons.  The human looks like it has slain the orc, but at a high personal cost.<em>"
+        + '<br><input type="button" value="Enter the dungeon" onclick="toDungeon()"></input>'
         + '<input type="button" value="Chicken out like the other villiagers" onclick="denyQuest()"></input>';
     }
     else if (combat <21){
@@ -64,9 +63,8 @@ function headout(){
         sFight++;
       } else {
         pm1Find();
-        document.getElementById('storyDiv').innerHTML = "Avoided Combat!"
-        + 'You come across the warrior, or the not warrior depending on code.'
-        + '<br><input type="button" value="Accept the Warrior\'s aid" onclick="toDungeon()"></input>'
+      document.getElementById('storyDiv').innerHTML = "<em>You come upto the dungeon where the supposed dragon lives.  You pass cliche D and D themed scenary, mostly medieval themed forests and shrubberies, with nothing of not happening until you come across an orc and human skeletons.  The human looks like it has slain the orc, but at a high personal cost.<em>"
+        + '<br><input type="button" value="Enter the dungeon" onclick="toDungeon()"></input>'
         + '<input type="button" value="Chicken out like the other villiagers" onclick="denyQuest()"></input>';
         }
 }

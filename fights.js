@@ -5,7 +5,7 @@ function fightRd() {
     sFight++;
     ID();
     document.getElementById('storyDiv').innerHTML = '<p>You have defeated the orc!</p><input type="button" value="Keep going" onclick="headout()"></input>'
-    +'<input type="button" value="Test" onclick="alert(sFight)"></input>'} else {
+    } else {
     dead();
     }
 }

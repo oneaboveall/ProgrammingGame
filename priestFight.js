@@ -6,7 +6,7 @@ if (pFCounter < 1){
   +'<br><input type="button" value=' + player.spl1 + ' onclick="PFS1()"></input>'
   +'<input type="button" value=' + player.spl2 + ' onclick="PFS2()"></input>';}
     else {
-    blkAlter();}
+    blkalter();}
 }
 
 function PFS1(){
