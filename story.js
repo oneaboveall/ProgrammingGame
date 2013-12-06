@@ -32,7 +32,7 @@ function acceptQuest(){
 }
 
 function denyQuest(){
-  document.getElementById('storyDiv').innerHTML = "You leave in shame and go home to live out your life in peace and die a meaningless death. No amount of soap could ever wash the stench of failure from your body."
+  document.getElementById('storyDiv').innerHTML = "<em>You leave in shame and go home to live out your life in peace and die a meaningless death. No amount of soap could ever wash the stench of failure from your body.</em>"
   + '<br><input type="button" value="Restart your adventure...as if you ever started it" onclick="location.reload()"></input>';
 }
 
@@ -40,10 +40,10 @@ function killVilliage(){
   var deathRoll
     deathRoll = d20()
   if (deathRoll < 15){
-    document.getElementById('storyDiv').innerHTML = "You were not the hero they needed you to be! You obviously were not strong enough to defeat the dragon if the villiagers dispatched you! Your carcass now serves as a smelly pinata for the villagers you attempted to slaughter!"
+    document.getElementById('storyDiv').innerHTML = "<em>You were not the hero they needed you to be! You obviously were not strong enough to defeat the dragon if the villiagers dispatched you! Your carcass now serves as a smelly pinata for the villagers you attempted to slaughter!</em>"
     + '<br><input type="button" value="Restart Adventure" onclick="location.reload()"></input>';
     } else{
-      document.getElementById('storyDiv').innerHTML = "You have murdered the vast majority of the villiagers! Those not yet murderized accept that they cannot defeat you. What will you do now?"
+      document.getElementById('storyDiv').innerHTML = "<em>You have murdered the vast majority of the villiagers! Those not yet murderized accept that they cannot defeat you. What will you do now?</em>"
       + '<br><input type="button" value="Head out" onclick="headout()"></input>';
 }
 }
@@ -59,7 +59,7 @@ function headout(){
         + '<input type="button" value="Chicken out like the other villiagers" onclick="denyQuest()"></input>';
     }
     else if (combat <21){
-      document.getElementById('storyDiv').innerHTML = "You are attacked by an unimpressive looking Orc! You must be getting close!"
+      document.getElementById('storyDiv').innerHTML = "<em>You begin your journey towards the dungeon where the supposed dragon lives. You pass cliche D and D themed scenary, mostly medieval themed forests and shrubberies, with nothing of note happeining until you are attacked by an unimpressive looking Orc. You must engage him, as he is just too pathetic looking to continue living. You know that this minor, filler encounter means you must be getting close to the dragon's lair.</em>"
         + '<br><input type="button" value=' + player.spl1 + ' onclick="fightRd()"></input>';
         sFight++;
       } else {
